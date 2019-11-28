@@ -1,3 +1,7 @@
+##############################################
+# python main.py --input_height 96 --input_width 96 --crop --output_height 64
+# --output_width 64 --dataset <filename> --train --epoch 300 --input_fname_pattern "*.jpg"
+##############################################
 import os
 import scipy.misc
 import numpy as np
