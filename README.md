@@ -6,15 +6,15 @@ DCGAN を動かしてみた。
 
 以下、動作確認済みの環境構築を説明する。
 
-DCGANは python のバージョンは 2.7 だと動いた。
-3.6 だと動かない説。
-スクレイピングは python 3.6じゃないと動かない。
-統一できなくてすいません……
+DCGANは python のバージョンは 2.7 だと動いた。  
+3.6 だと動かない説。  
+スクレイピングは python 3.6じゃないと動かない。  
+統一できなくてすいません……  
 
 Anaconda や pyenv の仮想環境を使用するのがオススメ。
 
-Anaconda で仮想環境を作成したため、以下 conda コマンドを使用。
-pip でも可。
+Anaconda で仮想環境を作成したため、以下 conda コマンドを使用。  
+pip でも可。  
 conda と pip の混在するとバグる可能性がある。
 
 ## Requirement
@@ -36,11 +36,11 @@ DCGAN関係のソースコード
 
 ### 開発環境
 
-| 使用ツール       | バージョン | URL                                                                       |
-| ---------------- | ---------- | ------------------------------------------------------------------------- |
-| python(dcgan実行時) | 2.7        | https://www.anaconda.com/                                                 |
+| 使用ツール              | バージョン | URL                                                                       |
+| --------------------- | ---------- | ------------------------------------------------------------------------- |
+| python(dcgan実行時)   | 2.7        | https://www.anaconda.com/                                                 |
 | python(スクレイピング) | 3.6        | https://www.anaconda.com/                                                 |
-| tensorflow       | 1.10.0     | http://tensorflow.classcat.com/2018/08/10/tensorflow-1-10-0-release-note/ |
+| tensorflow           | 1.10.0     | http://tensorflow.classcat.com/2018/08/10/tensorflow-1-10-0-release-note/ |
 
 ### 使用ライブラリ (Python)
 
@@ -56,11 +56,12 @@ DCGAN関係のソースコード
 #### スクレイピング
 
 | 使用ライブラリ | 説明                                                                                   |
+| -------------- | -------------------------------------------------------------------------------------- |
 | requests       | http ライブラリ                                                                        |
 | beautifulsoup4 | Web ページから情報を収集できるライブラリ                                               |
 | lxml           | libxml2/libxslt と ElementTree API を組み合わせた強力で Pythonic な XML 処理ライブラリ |
-| pillow | Pythonの画像処理ライブラリ |
-| matplotlib | グラフ描画ライブラリ |
+| pillow         | Pythonの画像処理ライブラリ                                                          |
+| matplotlib     | グラフ描画ライブラリ |
 
 ## Install & Usage
 
@@ -96,7 +97,7 @@ python main.py --input_height 96 --input_width 96 --crop --output_height 64
 
 ### スクレイピング
 
-画像をネットから自動で収集したい人は必見！
+画像をネットから自動で収集したい人は必見！  
 スクレイピングで簡単に画像を収集できます。
 
 ```bash
@@ -107,9 +108,9 @@ conda install pillow
 conda install matplotlib
 ```
 
-yahoo_collect.pyを実行すると画像を勝手に収集してくれる。
-短時間でたくさんダウンロードするので適宜 control c。
-ちなみにこれはpython3.6で動きます。
+yahoo_collect.pyを実行すると画像を勝手に収集してくれる。  
+短時間でたくさんダウンロードするので適宜 control c。  
+ちなみにこれはpython3.6で動きます。  
 python2.7だと動きません……
 
 ```bash
@@ -117,19 +118,19 @@ python yahoo_collect.py
 検索ワードを入力してください :　<検索キーワード>
 ```
 
-以下の実行で顔面抽出。
+以下の実行で顔面抽出。  
 実行する前にファイルパスを確認してください。
 ```bash
 python crop.py
 ```
 
-以下の実行で画像サイズを統一できる。
+以下の実行で画像サイズを統一できる。  
 実行する前にファイルパスを確認してください。
 ```bash
-python crop.py
+python resize.py
 ```
 
-これでデータセットの準備は整う。
+これでデータセットの準備は整う。  
 train_dataにはデモのデータセットが入っている。
 
 ## Demo
@@ -141,9 +142,9 @@ train_dataにはデモのデータセットが入っている。
 ## Licence
 
 ## References
-https://qiita.com/NakaokaRei/items/0551dbfc0ac14176b876
-https://github.com/carpedm20/DCGAN-tensorflow
-https://qiita.com/ishiwara51/items/3979fbc1c69b4f8ee2d3
+<https://qiita.com/NakaokaRei/items/0551dbfc0ac14176b876>  
+<https://github.com/carpedm20/DCGAN-tensorflow>  
+<https://qiita.com/ishiwara51/items/3979fbc1c69b4f8ee2d3>  
 
 ## Author
 
