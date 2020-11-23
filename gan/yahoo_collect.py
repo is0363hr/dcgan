@@ -108,7 +108,7 @@ def main(word):
 
     返り値:
     """
-    data_dir = 'data/'
+    data_dir = 'building/'
     if not os.path.exists(data_dir):
         os.makedirs(data_dir)
 
